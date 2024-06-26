@@ -5,7 +5,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var longestConsecutive = function (nums) {
+const longestConsecutive = (nums) => {
   let numSet = new Set([...nums]);
 
   let longest = 0;

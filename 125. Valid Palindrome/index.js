@@ -6,7 +6,7 @@
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function (s) {
+const isPalindrome = (s) => {
   let left = 0;
   let right = s.length - 1;
 

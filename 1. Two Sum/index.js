@@ -7,7 +7,7 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function (nums, target) {
+const twoSum = (nums, target) => {
   const numObj = {};
 
   for (let i = 0; i < nums.length; i++) {

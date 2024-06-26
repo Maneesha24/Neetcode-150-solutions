@@ -6,7 +6,7 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function (prices) {
+const maxProfit = (prices) => {
   let minPrice = Infinity;
   let maxProfit = 0;
 

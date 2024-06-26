@@ -6,7 +6,7 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
-var groupAnagrams = (words) => {
+const groupAnagrams = (words) => {
   let wordMap = {};
 
   const buildDict = (word) => {

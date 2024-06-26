@@ -6,7 +6,7 @@
  * @param {number} k
  * @return {number[]}
  */
-var topKFrequent = function (nums, k) {
+const topKFrequent = (nums, k) => {
   let numObj = {};
 
   for (const num of nums) {

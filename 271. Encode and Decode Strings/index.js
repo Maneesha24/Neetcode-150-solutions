@@ -5,7 +5,7 @@
  * @param {string[]} strs
  * @return {string}
  */
-var encode = function (strs) {
+const encode = (strs) => {
   let result = "";
 
   for (const str of strs) {
@@ -21,7 +21,7 @@ var encode = function (strs) {
  * @param {string} s
  * @return {string[]}
  */
-var decode = function (s) {
+const decode = (s) => {
   let i = 0;
   let result = [];
 
@@ -42,7 +42,7 @@ var decode = function (s) {
 };
 
 /**
- * Your functions will be called as such:
+ * Your s will be called as such:
  * decode(encode(strs));
  */
 

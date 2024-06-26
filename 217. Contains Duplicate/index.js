@@ -5,7 +5,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function (nums) {
+const containsDuplicate = (nums) => {
   let numSet = new Set([...nums]);
 
   return numSet.size !== nums.length;
