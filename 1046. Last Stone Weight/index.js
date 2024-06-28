@@ -15,15 +15,15 @@ const MaxHeap = require("../MaxHeap");
 const lastStoneWeight = (stones) => {
   const maxHeap = new MaxHeap();
   for (const stone of stones) {
-    maxHeap.push(stone);
+    maxHeap.add(stone);
   }
 
   while (maxHeap.size() !== 1) {
-    let maxStone2 = maxHeap.pop();
-    let maxStone1 = maxHeap.pop();
+    let maxStone2 = maxHeap.remove();
+    let maxStone1 = maxHeap.remove();
 
     if (maxStone1 !== maxStone2) {
-      maxHeap.push(Math.abs(maxStone2 - maxStone1));
+      maxHeap.add(Math.abs(maxStone2 - maxStone1));
     }
   }
 
