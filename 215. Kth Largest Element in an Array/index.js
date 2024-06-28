@@ -11,11 +11,11 @@ const MaxHeap = require("../MaxHeap");
 const findKthLargest = (nums, k) => {
   const heap = new MaxHeap();
   for (const num of nums) {
-    heap.push(num);
+    heap.add(num);
   }
 
   while (k > 1) {
-    heap.pop();
+    heap.remove();
     k--;
   }
 
