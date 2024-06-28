@@ -101,6 +101,10 @@ class MinHeap {
   size() {
     return this.heap.length;
   }
+
+  isEmpty() {
+    return this.heap.length === 0;
+  }
 }
 
 module.exports = MinHeap;
