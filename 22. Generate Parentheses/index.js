@@ -4,7 +4,7 @@
  * @param {number} n
  * @return {string[]}
  */
-var generateParenthesis = function (n) {
+const generateParenthesis = (n) => {
   const result = [];
 
   let paran = [];

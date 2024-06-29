@@ -10,7 +10,7 @@
  * @param {number} h
  * @return {number}
  */
-var minEatingSpeed = function (piles, h) {
+const minEatingSpeed = (piles, h) => {
   let result = 0;
 
   let left = 1;

@@ -6,7 +6,7 @@
  * @param {number[]} temperatures
  * @return {number[]}
  */
-var dailyTemperatures = function (temperatures) {
+const dailyTemperatures = (temperatures) => {
   let result = new Array(temperatures.length).fill(0);
 
   let stack = [];

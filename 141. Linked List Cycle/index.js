@@ -7,7 +7,7 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function (head) {
+const hasCycle = (head) => {
   let slow = head;
   let fast = head;
 

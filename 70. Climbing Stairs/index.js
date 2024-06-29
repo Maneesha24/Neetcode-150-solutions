@@ -5,7 +5,7 @@
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function (n) {
+const climbStairs = (n) => {
   if (n <= 2) {
     return n;
   }

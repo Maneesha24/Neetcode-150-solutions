@@ -6,7 +6,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var diameterOfBinaryTree = function (root) {
+const diameterOfBinaryTree = (root) => {
   let result = 0;
 
   const traverse = (node) => {
