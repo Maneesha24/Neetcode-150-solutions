@@ -1,4 +1,4 @@
-# Blind 75 Javascript Solutions
+# Neetcode 150 Javascript Solutions
 
 This repository includes Javascript solutions to the curated Neetcode 150 list. Each solution is accompanied by test cases that can be run using Jest.
 
