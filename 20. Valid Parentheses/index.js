@@ -8,7 +8,7 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function (s) {
+const isValid = (s) => {
   const paranObj = {
     "(": ")",
     "[": "]",
@@ -25,7 +25,7 @@ var isValid = function (s) {
     if (char in paranObj) {
       stack.push(char);
     } else if (paranObj[stack.pop()] != char) {
-        return false;
+      return false;
     }
   }
 

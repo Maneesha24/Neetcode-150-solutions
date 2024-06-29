@@ -7,7 +7,7 @@ const ListNode = require("../ListNode");
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-var mergeKLists = function (lists) {
+const mergeKLists = (lists) => {
   let root = lists[0];
 
   for (let i = 1; i < lists.length; i++) {

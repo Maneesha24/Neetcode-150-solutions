@@ -5,7 +5,7 @@
  * @param {number} n
  * @return {number[]}
  */
-const countBits = function (n) {
+const countBits = (n) => {
   let result = new Array(n + 1).fill(0);
 
   let i = 1;
