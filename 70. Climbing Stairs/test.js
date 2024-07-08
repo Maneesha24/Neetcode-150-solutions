@@ -1,6 +1,6 @@
-const maxArea = require("./index.js");
+const climbStairs = require("./index.js");
 
 test("should pass all test cases", () => {
-  expect(maxArea(2)).toEqual(2);
-  expect(maxArea(3)).toEqual(3);
+  expect(climbStairs(2)).toEqual(2);
+  expect(climbStairs(3)).toEqual(3);
 });

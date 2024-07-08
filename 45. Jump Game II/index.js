@@ -13,7 +13,7 @@ const jump = (nums) => {
     let count = 0;
 
     let reach = 0;
-    let cuurrentEnd = 0;
+    let currentEnd = 0;
 
     let i = 0;
 
@@ -21,12 +21,12 @@ const jump = (nums) => {
 
         reach = Math.max(reach, i + nums[i]);
 
-        if (i === cuurrentEnd) {
+        if (i === currentEnd) {
             count++;
-            cuurrentEnd = reach;
+            currentEnd = reach;
         }
 
-        if(cuurrentEnd >= nums.length) {
+        if (currentEnd >= nums.length) {
             break;
         }
 

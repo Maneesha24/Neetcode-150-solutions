@@ -12,21 +12,30 @@ const MinHeap = require("../MinHeap");
 const swimInWater = (grid) => {
     const moves = [[1, 0], [0, 1], [-1, 0], [0, -1]];
 
-    let minHeap = new MinHeap(),
-        N = grid.length - 1, ans = grid[0][0], i = 0, j = 0
-    while (i < N || j < N) {
-        for (let [a, b] of moves) {
-            let ia = i + a, jb = j + b
-            if (ia < 0 || ia > N || jb < 0 || jb > N || grid[ia][jb] > 2500) continue
+    const minHeap = new MinHeap();
+    const n = grid.length - 1;
+    
+    let ans = grid[0][0];
+    let i = 0;
+    let j = 0;
+
+    while (i < n || j < n) {
+        for (const [a, b] of moves) {
+            const ia = i + a;
+            const jb = j + b;
+            if (ia < 0 || ia > n || jb < 0 || jb > n || grid[ia][jb] > 2500) {
+                continue;
+            }
             minHeap.add((grid[ia][jb] << 12) + (ia << 6) + jb)
             grid[ia][jb] = 3000
         }
         let next = minHeap.remove();
-        ans = Math.max(ans, next >> 12)
-        i = (next >> 6) & ((1 << 6) - 1)
-        j = next & ((1 << 6) - 1)
+        ans = Math.max(ans, next >> 12);
+        i = (next >> 6) & ((1 << 6) - 1);
+        j = next & ((1 << 6) - 1);
     }
-    return ans
+    return ans;
+
 };
 
 module.exports = swimInWater;

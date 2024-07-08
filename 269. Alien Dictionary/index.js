@@ -24,24 +24,22 @@ const alienOrder = (words) => {
         let nextWord = words[i + 1];
         let minLength = Math.min(currentWord.length, nextWord.length);
 
-        for (let j = 0; j < words[i].length; j++) {
+        for (let j = 0; j < minLength; j++) {
+            let currentChar = currentWord[j];
+            let nextChar = nextWord[j];
 
-            for (let j = 0; j < minLength; j++) {
-                let currentChar = currentWord[j];
-                let nextChar = nextWord[j];
-
-                if (currentChar != nextChar) {
-                    if (!adjacencyList.get(currentChar).has(nextChar)) {
-                        adjacencyList.get(currentChar).add(nextChar);
-                        indegreeMap.set(nextChar, indegreeMap.get(nextChar) + 1);
-                    }
-                    break;
+            if (currentChar != nextChar) {
+                if (!adjacencyList.get(currentChar).has(nextChar)) {
+                    adjacencyList.get(currentChar).add(nextChar);
+                    indegreeMap.set(nextChar, indegreeMap.get(nextChar) + 1);
                 }
-
-                if (j === minLength - 1 && currentWord.length > nextWord.length) {
-                    return "";
-                }
+                break;
             }
+
+            if (j === minLength - 1 && currentWord.length > nextWord.length) {
+                return "";
+            }
+
         }
     }
 
